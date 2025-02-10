@@ -111,8 +111,8 @@ fun ListScreen(
 fun PreviewListScreen() {
    PetAdoptionTheme {
       ListScreen(
-         petList = PetDataSource().loadPets(),
-         onImageClick = { }
+         //petList = PetDataSource().loadPets(),
+         onImageClick = {}
       )
    }
 }
@@ -185,8 +185,8 @@ fun PreviewDetailScreen() {
    val pet = PetDataSource().loadPets()[0]
    PetAdoptionTheme {
       DetailScreen(
-         pet = pet,
-         onAdoptClick = { }
+         petId = pet.id,
+         onAdoptClick = {}
       )
    }
 }
@@ -245,7 +245,7 @@ fun AdoptScreen(
 fun PreviewAdoptScreen() {
    val pet = PetDataSource().loadPets()[0]
    PetAdoptionTheme {
-      AdoptScreen(pet)
+      AdoptScreen(pet.id)
    }
 }
 
